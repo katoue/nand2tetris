@@ -17,3 +17,16 @@ CHIP Xor {
     Nand(a=a, b=b, out=c2);
     And(a=c1, b=c2, out=out);
 }
+// Another solution
+// CHIP Xor {
+//
+//  IN a, b;
+//  OUT out;
+
+//  PARTS:
+//  Not (in=a, out=nota);
+//  Not (in=b, out=notb);
+//  And (a=a, b=notb, out=x);
+//  And (a=nota, b=b, out=y);
+//  Or (a=x, b=y, out=out);
+//}
